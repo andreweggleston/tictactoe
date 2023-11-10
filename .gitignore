@@ -12,3 +12,7 @@ docs/
 
 # Dotenv file
 .env
+
+#vscode things
+.vscode/
+remappings.txt
