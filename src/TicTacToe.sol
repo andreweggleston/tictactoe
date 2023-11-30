@@ -25,7 +25,7 @@ contract TicTacToe {
     /*
     * The board state will be represented by 2 sets of 9 bit numbers: one for each player
     * 
-    * bit number and position: 
+    * bit number and position, as well as winning combinations: 
     *
     *               ┌> 84
     *  ┌───┬───┬───┐
@@ -213,7 +213,7 @@ contract TicTacToe {
     }
 
     //uint16[] WINNING_STATES = [7, 56, 448, 73, 146, 292, 273, 84]; 
-    /// @param board a 16 bit int representing a board. only the bottom 9 bits are used
+    /// @param board a 16 bit int representing a board. only the least significant 9 bits are used
     function board_has_winning_arrangement(uint16 board) private pure returns(bool) {
         return (
             (7 == 7 & board)
